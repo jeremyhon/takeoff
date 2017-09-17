@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
     "start": "npm run db:migrate && npm run db:seed && nodemon index.js",
-    "db:migrate": "sequelize db:migrate:undo:all && sequelize db:migrate",
+    "db:rollback": "sequelize db:migrate:undo:all",
+    "db:migrate": "sequelize db:migrate",
     "db:seed": "sequelize db:seed:undo:all && sequelize db:seed:all",
     "db:clean": "docker exec docker_api_1 node_modules/.bin/sequelize db:migrate:undo:all && docker exec docker_api_1 node_modules/.bin/sequelize db:migrate && docker exec docker_api_1 node_modules/.bin/sequelize db:seed:all"
   },
