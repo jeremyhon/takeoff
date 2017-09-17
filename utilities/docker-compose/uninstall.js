@@ -28,12 +28,12 @@ let result = spawn(command, args);
 
 if (argv.v) {
     result.stdout.on('data', message => {
-        console.log(`[Docker Uninstall]: ${message}`.trim());
+        console.log(`${message}`.trim());
     });
 }
 
 result.stderr.on('data', message => {
-    console.error(`[Docker Uninstall]: ${message}`.trim());
+    console.error(`${message}`.trim());
 });
 
 result.on('exit', () => {

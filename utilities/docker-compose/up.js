@@ -34,12 +34,12 @@ let result = spawn(command, args);
 
 if (!argv.h) {
     result.stdout.on('data', message => {
-        console.log(`[Docker Up]: ${message}`.trim());
+        console.log(`${message}`.trim());
     });
 }
 
 result.stderr.on('data', message => {
-    console.error(`[Docker Up]: ${message}`.trim());
+    console.error(`${message}`.trim());
 });
 
 result.on('exit', () => {
