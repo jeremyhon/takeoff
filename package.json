@@ -14,6 +14,7 @@
     "compose:stop": "make stop",
     "compose:down": "make down",
     "compose:rm": "make clean-images",
+    "compose:up": "make up",
     "clean": "make spotless",
     "api:connect": "docker exec -it docker_api_1 /bin/bash",
     "start": "npm run compose:up",
