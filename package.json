@@ -17,6 +17,7 @@
     "compose:up": "make up",
     "clean": "make spotless",
     "api:connect": "docker exec -it docker_api_1 /bin/bash",
+    "app:connect": "docker exec -it docker_app_1 /bin/bash",
     "start": "npm run compose:up",
     "stop": "npm run compose:stop",
     "db:connect": "psql -h localhost -p 5431 -U myappuser -d myappdb",
